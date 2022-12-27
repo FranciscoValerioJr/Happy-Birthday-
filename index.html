@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Happy Birthday Form</title>
+  <style>
+    /* Add some styling for the form and greeting */
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: white;
+    }
+    form {
+      margin: 20px;
+      padding: 20px;
+      background-color: white;
+      border: 2px 2px solid white;
+      border-radius: 5px;
+      box-shadow: 2px 2px 5px 2px  lightgray;
+    }
+    input[type="text"] {
+      width: 80%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: 2px solid black;
+      border-radius: 4px;
+    }
+    input[type="submit"] {
+      width: 50%;
+      background-color: blueviolet;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: blueviolet;
+    }
+    h1 {
+      font-size: 36px;
+      color: black;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Happy Birthday!</h1>
+  <!-- Add a form for the user to enter their name -->
+  <form id="birthday-form">
+    <label for="name">Enter your name:</label><br>
+    <input type="text" id="name" name="name"><br>
+    <input type="submit" value="Submit">
+  </form>
+
+  <!-- Add a JavaScript function to display the greeting -->
+  <script>
+    const form = document.getElementById('birthday-form');
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const name = document.getElementById('name').value;
+      alert(`Happy 18th birthday to my former classmate! It feels like just yesterday that we were in school together, and now you're all grown up and reaching this exciting milestone. I hope that your 18th year is filled with lots of love, laughter, and all of your heart's desires. May this be the beginning of a wonderful new chapter in your life, filled with endless opportunities and endless adventures. Wishing you all the best on your special day., ${name}!`);
+    });
+  </script>
+</body>
+</html>
